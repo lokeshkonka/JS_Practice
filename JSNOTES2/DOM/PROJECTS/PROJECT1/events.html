@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS IN JAVASCRIPT</title>
+</head>
+<body>
+    <div>
+        <ul id="image" >
+            <li><img width="100px" id="owl" src="https://media.istockphoto.com/id/907874662/vector/vector-flat-cute-brown-owl-sitting-on-branch-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=Xl13RMegwoRoZVLLc5r9NL27LIIOvvtFBVEtwTfpVgE=" alt="OWL"></li>
+            <li><img width="100px" id="owl2" src="https://media.istockphoto.com/id/907874662/vector/vector-flat-cute-brown-owl-sitting-on-branch-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=Xl13RMegwoRoZVLLc5r9NL27LIIOvvtFBVEtwTfpVgE=" alt="OWL"></li>
+        </ul>
+    </div>
+</body>
+<script>
+    //basic approach
+    // document.getElementById('owl').onclick = ()=>{alert('owl is clicked')}
+   
+
+    // Proper Approach
+    // document.getElementById('owl').addEventListener('click',()=>{alert('OWL IS CLICKEDD')},false)
+
+
+  // false is bydefault event..event propagation ..this is event bubbling(niche se uper jata hai) or capturing(uper se niche)
+
+
+  //type,timestamp,defaultPreventedcurrentTarget
+  //target,toElement,srcElement,
+  //client X ,client Y, tilt X,tilt Y
+  //altkey,ctrlkey,specialkey is pressed or not
+  //keycode
+// document.getElementById('images').addEventListener('click',(e)=>{
+//     console.log("images clicked");
+    
+// })
+// document.getElementById('owl').addEventListener('click',(e)=>{
+//     console.log("owl clicked");
+    
+// })
+// so..by clicking on owl imagelog will propagate first to prevent we use true or false
+// document.getElementById('images').addEventListener('click',function (e){
+//     console.log("images clicked");
+    
+// },false)
+// document.getElementById('image').addEventListener('click',()=>{console.log('image IS CLICKEDD');},false)
+// document.getElementById('owl').addEventListener('click',()=>{console.log('OWL IS CLICKEDD');},true)
+document.getElementById('owl').addEventListener('click',(e)=>{
+    console.log('OWL IS CLICKEDD');
+  e.stopPropagation() //this will stop other bubbles
+  e.preventDefault() //this will
+})
+//e.target uska tag bataega
+//e.target.parentnode
+//remove(); to rmove tags
+//removechild(arr) ; removes the child
+//e.target.TagName its will show what tag (img,li)
+//e.target.id it will show id of that tag
+</script>
+</html>

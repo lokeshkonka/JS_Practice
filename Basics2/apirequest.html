@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARD SYSTEM</title>
+</head>
+<style>
+    body{
+        background-color: #212121;
+        font-style: italic;
+        color: rgb(179, 192, 204);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+   
+    .card{
+       
+        width: 300px;
+        height: 350px;
+        background-color: #507f9b;
+    }
+    img{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+    }
+    .img{ padding: 10px;
+        height: 100px;
+        width: 100px;
+        margin: 10px 10px 10px 10px ;
+        
+    }
+    .followers{
+        margin: 10px;
+    }
+</style>
+<body>
+    <h1></h1>
+    <div class="card">
+       
+    <div class="img">
+        
+     <img id="image" alt="img">
+     
+    </div>
+    <div class="followers">
+        <h1>followers:</h1>
+    </div>
+      <div class="bio"></div>
+    </div>
+</body>
+<script>
+const image = document.getElementById('image')
+let followers =document.querySelector('.followers');
+let bio = document.querySelector('.bio');
+
+const xhr =new XMLHttpRequest();
+const requesturl ='https://api.github.com/users/hiteshchoudhary'
+xhr.open('GET',requesturl)
+
+xhr.onreadystatechange =function(){
+   if(xhr.readyState === 4){
+    const data = JSON.parse(this.responseText)
+     console.log(data);
+     followers.innerHTML = `FOLLOWERS: ${data.followers}`;
+     image.src = data.avatar_url;
+    bio.innerHTML =`<h5>BIO: ${data.bio}<h5>`
+     console.log(data.name)
+ 
+
+
+
+   }
+   
+}
+xhr.send()
+image.addEventListener('click',()=>{
+    let color = "#";
+    let random = "0123456789ABCDEF"
+    for(let i=0;i<6;i++ ){
+        color+=random[Math.floor(Math.random()*16)]
+
+    }
+    console.log(color);
+    document.body.style.backgroundColor = color
+
+})
+
+
+
+
+
+</script>
+</html>

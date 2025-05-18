@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">chai aur chai</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+
+let Randomcolor = function () {
+        let color = '#';
+        const hex = '0123456789ABCDEF';
+for(let i=0;i<6;i++){
+     color+=hex[Math.floor(Math.random()*16)]
+}return color
+}
+
+console.log(Randomcolor());
+
+
+
+
+let hi= function (){
+    document.body.style.backgroundColor = Randomcolor()
+    //console.log("hi",Date());
+}
+
+let intervalid
+function startlog(){
+   intervalid = setInterval(hi,1000)
+}
+function stopthelog(){
+    clearInterval(intervalid)
+    console.log("Stopped yooo");
+    
+}
+
+
+
+document.querySelector('#start').addEventListener('click',()=>{
+    startlog()  
+})
+document.querySelector('#stop').addEventListener('click',()=>{
+  stopthelog()
+    
+})
+</script>
+</html>

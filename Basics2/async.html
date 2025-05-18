@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">chai aur chai</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    setTimeout(function(){
+        console.log("Hits");
+        //in milliseconds  
+    },2000)
+// also this one
+const sayhits = ()=>{
+    console.log("Hits too");
+    
+}
+setTimeout(sayhits,3000)
+
+const h1 =function(){
+    document.querySelector('h1').innerHTML ="OHH TEXT CHANGED"
+}
+// setTimeout(changeText,2000)
+// setTimeout(h1,2000)
+//clear timeout will remove the access in settimouts
+const changeMe =setTimeout(h1,2000);
+// clearTimeout(changeMe) it will stop the access
+ document.querySelector('#stop').addEventListener('click',()=>{
+    clearInterval(changeMe)
+    console.log("OHH STOPPED");
+    
+
+})
+</script>
+</html>

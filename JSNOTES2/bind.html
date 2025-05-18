@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+<body>
+    <button>Button clikced</button>
+</body>
+<script>
+    class react{
+        constructor(){
+            this.server = 'https://localhost:123'
+            this.library = 'abc123'
+            document.querySelector('button').addEventListener('click',this.handleclick.bind(this))
+        }
+        handleclick(){
+            console.log(`oHH u clicked the button`);
+            console.log(this.server)
+            
+        }
+    }
+ const user = new react()
+</script>
+</html>
