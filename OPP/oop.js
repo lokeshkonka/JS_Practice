@@ -91,6 +91,15 @@ console.log(pengi.fly());
 let eagle = new bird
 console.log(eagle.fly());
 
+// Static Keyword is acccessed only with class
+
+class Calculator {
+   static add(a,b){
+      return `The Addition is ${a+b}`
+   }
+}
+console.log(Calculator.add(120,78));
+
 
 
 
