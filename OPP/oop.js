@@ -100,7 +100,35 @@ class Calculator {
 }
 console.log(Calculator.add(120,78));
 
+// Getters and Setters
 
+class employee {
+   #salary // to make it private
+   constructor(name,salary){
+      if (salary < 0) {
+         throw console.error("invalid salary");
+         
+      }
+      else{
+         this.name = name
+         this.#salary = salary
+      }
+   }
+   set salary(value) {
+      if (value < 0) {
+         throw new Error("Invalid salary");
+         
+      } else {
+         this.#salary = value
+      }
+   }
+   get salary(){
+         console.error("cannot access directly ")
+   }
+}
+let emp = new employee("alice",-4000)
+// console.log(emp.#salary);
+// console.log(emp.salary());
 
 
 
