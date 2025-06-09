@@ -71,7 +71,25 @@ let acc = new Bankacc
 // It doesnt care about complex working it all takes that how  it is implemented
 
 
+//Polymorphism
+// the orignal can change in any form 
 
+class bird{
+   fly(){
+      return `Flying...`
+   }
+}
+class penguin extends bird{
+
+   fly(){
+      return `Penguins can't Fly use different Bird`
+   }
+}
+let pengi = new penguin
+console.log(pengi.fly());
+
+let eagle = new bird
+console.log(eagle.fly());
 
 
 
