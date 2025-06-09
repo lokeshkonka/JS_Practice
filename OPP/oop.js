@@ -50,6 +50,24 @@ console.log(mycar.start());
 console.log(mycar.drive());  // Inheritance Example
 
 
+// Encapsulation :- Restriction of direct access to  object Data
+class Bankacc{
+   #balance = 0;
+   deposit(money){
+      this.money = money
+      this.#balance += money
+      return `this ${this.money} is Deposited`
+   }
+   getbalance(){
+      return `the Balance is : $ ${this.#balance}`
+   }
+}
+let acc = new Bankacc
+// console.log(acc.#balance);
+// acc.deposit(600)
+// console.log(acc.getbalance());
+
+
 
 
 
