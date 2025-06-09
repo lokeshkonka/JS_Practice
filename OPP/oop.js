@@ -101,7 +101,7 @@ class Calculator {
 console.log(Calculator.add(120,78));
 
 // Getters and Setters
-
+// Getters allow you to retrieve the value of an object's property, while setters let you set or modify that property's value, which helps control how data is accessed and updated, ensuring encapsulation in object-oriented programming. This understanding is fundamental for managing data integrity in your code.
 class employee {
    #salary // to make it private
    constructor(name,salary){
