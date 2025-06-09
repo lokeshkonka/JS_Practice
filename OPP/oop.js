@@ -1,3 +1,4 @@
+// Similar to class 
 const user ={
    username:"HITESH",
    issignedin:true,
@@ -11,14 +12,42 @@ const user ={
 
 
 }
-console.log(user.getuserdetails());
-console.log(this); //empty in node but window object in browser
+// console.log(user.getuserdetails());
+// console.log(this); //empty in node but window object in browser
+
 //this is  current context
 // new keyward is use for creating new instances ,new context or constructor function..new memory or object is created .
 //new will stop overwriting in functions
 
-// after someg
+Array.prototype.loki = function () {
+   return `Ohh An custom Method !!`
+}
+myarr = [1,2,3,34,];
+// console.log(myarr.loki());
 
+class Vehicle{
+   constructor(model,make){
+      this.make = make
+      this.model = model
+   }
+   start(){
+      return `this is a car from ${this.make} and model of ${this.model}`
+   }
+}
+
+
+// Inheritance of Object orineted programming
+
+class Car extends Vehicle{
+   drive(){
+      return `this is ${this.model}  , an Inheritance example `
+   }
+}
+
+let mycar =new Car("safari", "TATA")
+console.log(mycar.start());
+
+console.log(mycar.drive());  // Inheritance Example
 
 
 
