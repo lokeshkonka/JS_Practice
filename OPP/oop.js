@@ -67,6 +67,8 @@ let acc = new Bankacc
 // acc.deposit(600)
 // console.log(acc.getbalance());
 
+// Abstraction 
+// It doesnt care about complex working it all takes that how  it is implemented
 
 
 
