@@ -16,3 +16,25 @@ console.log(this); //empty in node but window object in browser
 //this is  current context
 // new keyward is use for creating new instances ,new context or constructor function..new memory or object is created .
 //new will stop overwriting in functions
+
+// after someg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
