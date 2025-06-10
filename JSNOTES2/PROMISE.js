@@ -118,3 +118,5 @@ async function hitsget() {
     
 }
 hitsget()
+
+// a chain of then should be used carefully
