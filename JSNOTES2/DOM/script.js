@@ -1,7 +1,7 @@
-// document.getElementById('title')
-// document.getElementById('title').className //it will give class if present
-// document.getElementById('title').getAttribute('class')
-// document.getElementById('title').setAttribute('class','test')
+document.getElementById('title')
+document.getElementById('title').className //it will give class if present
+document.getElementById('title').getAttribute('class')
+document.getElementById('title').setAttribute('class','test')
 
 // changing styles
 title.style.backgroundcolor ='green'
